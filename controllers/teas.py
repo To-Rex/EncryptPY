@@ -177,20 +177,20 @@ def decode_base64_url(encoded_str):
 
 
 # Example usage
-key = "50UvFayZ2w5u3O9B"
-data = '{"phone": "+998995340313","session":"SX2eafvMG0FPejAMi3U8dNNmA+J+ecCDdOXvzH6jhRk8wD1g5+AmTCG6PoZEukai"}'
-#data = '{"phone": "+998995340313","code":"81940"}'
-
-# Encrypt
-encrypted = TEA.encrypt_tea(data, key)
-print(f"Encrypted: {encrypted}")
-
-# Decrypt
-try:
-    decrypted = TEA.decrypt_tea(
-        'TwXZWWsGG/kgW3FnTKdQ0h8iEaYoC91lFfuAA48DCCWMkuDp87ANrYc03VHp2lCVWZDH4UMzx0+LaCkg/Za2056xgoN+bF2HpuhQFEXehw0MVaGTq+Z/+zvCEDd7T3W7V12awXyp99v1OgfJoaN6Tfl1ZbmmkQyzuNG0lpp1LmCozYRIQrq1qm438wfcZiGRKDayQnzFAxNJIEF+ekqe/MvKd/wi7Wp1F412yp9pdVkNrrMurMuhd75TzWwnR3tMwaNDKM0XPLSpJCLa0R2d',
-        key)
-    print(f"Decrypted: {decrypted}")
-except Exception as e:
-    print(f"Error: {e}")
-
+# key = "50UvFayZ2w5u3O9B"
+# data = '{"phone": "+998995340313","session":"SX2eafvMG0FPejAMi3U8dNNmA+J+ecCDdOXvzH6jhRk8wD1g5+AmTCG6PoZEukai"}'
+# #data = '{"phone": "+998995340313","code":"81940"}'
+#
+# # Encrypt
+# encrypted = TEA.encrypt_tea(data, key)
+# print(f"Encrypted: {encrypted}")
+#
+# # Decrypt
+# try:
+#     decrypted = TEA.decrypt_tea(
+#         'TwXZWWsGG/kgW3FnTKdQ0h8iEaYoC91lFfuAA48DCCWMkuDp87ANrYc03VHp2lCVWZDH4UMzx0+LaCkg/Za2056xgoN+bF2HpuhQFEXehw0MVaGTq+Z/+zvCEDd7T3W7V12awXyp99v1OgfJoaN6Tfl1ZbmmkQyzuNG0lpp1LmCozYRIQrq1qm438wfcZiGRKDayQnzFAxNJIEF+ekqe/MvKd/wi7Wp1F412yp9pdVkNrrMurMuhd75TzWwnR3tMwaNDKM0XPLSpJCLa0R2d',
+#         key)
+#     print(f"Decrypted: {decrypted}")
+# except Exception as e:
+#     print(f"Error: {e}")
+#
