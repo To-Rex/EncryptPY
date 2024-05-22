@@ -7,7 +7,6 @@ from models.response import ResponseData, RequestData
 app = FastAPI()
 
 
-
 @app.get('/')
 def index():
     return 'Hello, World!'
@@ -38,4 +37,5 @@ def decrypt(request_data: RequestData):
 
 
 if __name__ == '__main__':
-    uvicorn.run(app)
+    #uvicorn.run(app)
+    uvicorn.run("app.main:app", reload=True)
