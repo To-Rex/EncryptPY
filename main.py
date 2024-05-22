@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 
 from controllers.teas import TEA
@@ -36,5 +37,4 @@ def decrypt(request_data: RequestData):
 
 
 if __name__ == '__main__':
-    import uvicorn
     uvicorn.run(app)
