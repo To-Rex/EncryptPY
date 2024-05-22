@@ -36,6 +36,6 @@ def decrypt(request_data: RequestData):
         raise ResponseData(status=500, message="Decoding failed", data=str(e))
 
 
-if __name__ == '__main__':
-    #uvicorn.run(app)
-    uvicorn.run("app.main:app", reload=True)
+# if __name__ == '__main__':
+#     #uvicorn.run(app)
+#     uvicorn.run("app.main:app", reload=True)
