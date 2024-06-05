@@ -6,6 +6,8 @@ from models.response import ResponseData, RequestData
 
 app = FastAPI()
 
+count_requests = 0
+
 
 @app.get('/')
 def index():
@@ -36,11 +38,13 @@ def decrypt(request_data: RequestData):
         raise ResponseData(status=500, message="Decoding failed", data=str(e))
 
 
-@app.get('/api/hello', response_model=ResponseData)
-def hello():
-    print("Hello, World!")
-    return ResponseData(status=200, message="Hello, World!", data="Hello, World!")
+@app.get('/api/count', response_model=ResponseData)
+def get_count():
+    global count_requests
+    count_requests += 1
+    return ResponseData(status=200, message="Count retrieved successfully", data=str(count_requests))
 
-# if __name__ == '__main__':
-#     #uvicorn.run(app)
-#     uvicorn.run("app.main:app", reload=True)
+
+#if __name__ == '__main__':
+    #uvicorn.run(app)
+    #uvicorn.run("app.main:app", reload=True)
