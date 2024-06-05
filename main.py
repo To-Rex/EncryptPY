@@ -35,6 +35,11 @@ def decrypt(request_data: RequestData):
     except Exception as e:
         raise ResponseData(status=500, message="Decoding failed", data=str(e))
 
+@app.get('/api/hello', response_model=ResponseData)
+def hello():
+    print("Hello, World!")
+    return ResponseData(status=200, message="Hello, World!", data="Hello, World!")
+
 
 # if __name__ == '__main__':
 #     #uvicorn.run(app)
